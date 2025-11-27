@@ -4,7 +4,12 @@ const PORT = 3000
 const pizzasRouter = require('./routes/pizzas')
 const drinksRouter = require('./routes/drinks')
 
+// register the static assets
 app.use(express.static('public'))
+
+// register the body parser
+app.use(express.json())
+
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

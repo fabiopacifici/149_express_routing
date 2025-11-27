@@ -1,39 +1,26 @@
 const express = require('express')
 // create an instance of the router application (mini-app)
 const router = express.Router()
-
+const pizzaController = require('../controllers/pizzaController')
 
 // index
-router.get('/', (req, res) => {
-  res.send('Show all pizzas here');
-})
+router.get('/', pizzaController.index )
 
 // show
-router.get('/:id', (req, res) => {
-  res.send(`Show the pizza with id: ${req.params.id}`);
-})
+router.get('/:id', pizzaController.show )
 
 // store
-router.post('/', (req, res) => {
-  res.send('Store a new pizza here');
-})
+router.post('/', pizzaController.store )
 
 // update
-router.put('/:id', (req, res) => {
-  res.send(`Update the pizza with id: ${req.params.id}`);
-})
+router.put('/:id', pizzaController.update)
 
 // modify (optional)
-router.patch('/:id', (req, res) => {
-  res.send(`Modify the pizza with id: ${req.params.id}`);
-})
+router.patch('/:id', pizzaController.modify )
 
 
 // destroy
-router.delete('/:id', (req, res) => {
-  res.send(`Delete the pizza with id: ${req.params.id}`)
-})
-
+router.delete('/:id', pizzaController.destroy)
 
 
 
