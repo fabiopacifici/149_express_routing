@@ -3,6 +3,14 @@ const express = require('express')
 const router = express.Router()
 const pizzaController = require('../controllers/pizzaController')
 
+
+/*
+Option 4: route level middleware
+router.use((req, res, next)=>{
+  console.log('Iam the router middleware for pizzas');
+  next()
+}) */
+
 // index
 router.get('/', pizzaController.index )
 
