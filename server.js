@@ -6,6 +6,7 @@ const drinksRouter = require('./routes/drinks')
 const logger = require('./middlewares/logger')
 const serverError = require('./middlewares/serverError')
 const notFound = require('./middlewares/notFound')
+const pizzas = require('./data/menu')
 
 // register the static assets
 app.use(express.static('public'))
@@ -164,6 +165,7 @@ app.patch('/api/drinks/:id', (req, res) => {
 app.delete('/api/drinks/:id', (req, res) => {
   res.send(`Delete the drink with id: ${req.params.id}`)
 }) */
+
 
 
 app.use(serverError)

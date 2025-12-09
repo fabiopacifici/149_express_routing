@@ -2,6 +2,7 @@
   "name": "express-crud-api",
   "version": "1.0.0",
   "main": "server.js",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
@@ -12,6 +13,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^5.1.0"
+    "@huggingface/transformers": "^3.8.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.3"
   }
 }
